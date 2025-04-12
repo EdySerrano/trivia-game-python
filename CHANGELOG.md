@@ -29,4 +29,9 @@
 - tag: `v1.0-day3`
 
 ## Dia 4 - 2025-04-12
-- 
+- Modificar la clase `Quiz`
+- Actualizar pruebas unitarias `test_quiz_scoring()`
+- Implementar la funcion `rin_Quiz()`
+- Commit : "Implementación de sistema de puntuación, manejo de rondas y finalización del juego"
+- Rama: `feature/dia4`
+- tag: `v1.0-day4`
