@@ -1,5 +1,4 @@
 from fastapi.testclient import TestClient
-from trivia import app
 
 client = TestClient(app)
 
