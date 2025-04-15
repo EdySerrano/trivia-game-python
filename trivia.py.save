@@ -158,7 +158,7 @@ def run_quiz():
 
         print(f"Pregunta {total + 1}: {question.description}")
         for i, option in enumerate(question.options, 1):
-            print(f"{i}) {option}")
+            print(f"{i}) {option}"
 
         answer = input("Tu respuesta: ").strip()
 
