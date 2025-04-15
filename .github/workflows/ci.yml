@@ -1,28 +1,19 @@
-name: SonarCloud
-
+name: Build
 on:
   push:
     branches:
-      - main
+      - develop
   pull_request:
     types: [opened, synchronize, reopened]
-
 jobs:
-  sonarcloud:
-    name: SonarCloud Scan
-    runs-on: ubuntu-latest
-
+  sonarqube:
+    name: SonarQube
+    runs-on: windows-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@v2
+      - uses: actions/checkout@v4
         with:
-          projectBaseDir: .
-          args: >
-            -Dsonar.projectKey=EdySerrano_trivia-game-python
-            -Dsonar.organization=edyserrano
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v5
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
