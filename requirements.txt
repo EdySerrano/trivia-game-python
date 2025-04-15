@@ -1,1 +1,7 @@
-pytest\nrequests
+fastapi
+uvicorn
+pytest
+requests
+python-dotenv
+httpx
+bandit
