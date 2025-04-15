@@ -48,9 +48,10 @@ jobs:
           echo "/opt/sonar-scanner/bin" >> $GITHUB_PATH
 
       - name: Run SonarQube Scanner
-        run: |
+        run: | 
           sonar-scanner \
             -Dsonar.projectKey=trivia-game-python \
+            -Dsonar.organization= edyserrano \
             -Dsonar.sources=. \
             -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} \
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
