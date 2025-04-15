@@ -1,5 +1,5 @@
 # trivia.py
-
+# Aqui se observara las preguntas y las respuestas y sera el main.py
 from dotenv import load_dotenv
 import os
 
