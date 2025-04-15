@@ -33,7 +33,6 @@
 ## Dia 4 - 2025-04-12
 - Modificar la clase `Quiz`
 - Actualizar pruebas unitarias `test_quiz_scoring()`
-<<<<<<< HEAD
 - Implementar la funcion `run_Quiz()`
 - Commit : "Implementación de sistema de puntuación, manejo de rondas y finalización del juego"
 - Rama: `feature/dia4`
@@ -48,3 +47,11 @@
 - Rama: `feature/dia5`
 - tag: `v1.0-day5`
 
+## Dia 6 - 2025-04-14
+- Crear una rama para CI/CD
+- Crear el archivo de workflow en gitHubActions
+- Configurar `SonarQube`
+- Implementar las pruebas de integracion para la API
+- Commit:"Configuración de pipeline CI/CD y pruebas de integración"
+- rama: `feature/dia6`
+- tag: `v1.0-day6`
