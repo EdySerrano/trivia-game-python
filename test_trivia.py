@@ -5,8 +5,6 @@ import pytest
 from trivia import Question, Quiz
 from trivia import run_quiz
 
-run_quiz()
-
 from trivia import Quiz, Question
 
 
