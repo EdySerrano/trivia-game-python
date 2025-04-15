@@ -47,13 +47,12 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
-      - name: Run SonarQube Scanner (manual, if required)
+      - name: Run SonarQube Scanner 
         run: | 
           sonar-scanner \
             -Dsonar.projectKey=EdySerrano_trivia-game-python \
             -Dsonar.organization=edyserrano \
             -Dsonar.sources=. \
-            -Dsonar.language=py
             -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} \
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
