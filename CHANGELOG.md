@@ -57,3 +57,12 @@
 - rama: `feature/dia6`
 - tag: `v1.0-day6`
 
+
+## Dia 7 - 2025-04-15
+- Crear el archivo `.env`
+- Modificar la aplicacion para cargas variables
+- Agregamos pruebas de seguridad en Bandit en el pipeline
+- Creamos el archivo `locustfile.py` para pruebas
+- Commit:""Versión final del proyecto Trivia con CI/CD y pruebas de seguridad""
+- rama: `feature/dia7`
+- tag: `v1.0-day7`
