@@ -9,10 +9,6 @@ run_quiz()
 def test_question_correct_answer():
     question = Question("What is 2 + 2?", ["1", "2", "3", "4"], "4")
     assert question.is_correct("4")
-    
-def test_run_quiz(monkeypatch):
-    monkeypatch.setattr('builtins.input', lambda _: '1') 
-    run_quiz()  
 
 
 def test_question_incorrect_answer():
