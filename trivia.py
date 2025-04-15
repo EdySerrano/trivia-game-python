@@ -8,6 +8,7 @@ class Question:
 
     def is_correct(self, answer):
         return self.correct_answer == answer
+
     
 
 def get_easy_questions():
@@ -59,8 +60,10 @@ class Quiz:
     def __init__(self):
         self.questions = []
         self.current_question_index = 0
+
         self.correct_answers = 0
         self.incorrect_answers = 0
+
 
     def add_question(self, question):
         self.questions.append(question)
@@ -131,4 +134,29 @@ def run_quiz():
 
 
 
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+@app.get("/questions/easy")
+def get_easy():
+    questions = get_easy_questions()
+    return [{"description": q.description, "options": q.options} for q in questions]
+
+@app.get("/questions/medium")
+def get_medium():
+    questions = get_medium_questions()
+    return [{"description": q.description, "options": q.options} for q in questions]
+
+@app.get("/questions/hard")
+def get_hard():
+    questions = get_hard_questions()
+    return [{"description": q.description, "options": q.options} for q in questions]
