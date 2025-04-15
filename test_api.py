@@ -4,6 +4,7 @@ from trivia import app
 client = TestClient(app)
 
 def test_create_and_get_question():
+   
     create_response = client.post("/questions/", json={
         "description": "What is 2 + 2?",
         "options": ["1", "2", "3", "4"],
@@ -11,7 +12,8 @@ def test_create_and_get_question():
     })
     assert create_response.status_code == 201
     assert create_response.json() == {"message": "Question created"}
-    
+
+   
     get_response = client.get("/questions/1")
     assert get_response.status_code == 200
     question = get_response.json()
