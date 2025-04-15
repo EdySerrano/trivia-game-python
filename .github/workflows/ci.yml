@@ -60,6 +60,7 @@ jobs:
             -Dsonar.projectKey=EdySerrano_trivia-game-python \
             -Dsonar.organization=edyserrano \
             -Dsonar.sources=. \
+            -Dsonar.language=py
             -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} \
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
