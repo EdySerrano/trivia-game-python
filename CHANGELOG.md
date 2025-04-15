@@ -1,7 +1,8 @@
 # CHANGELOG.md
 
 
-## Dia 1 - 2025-04-10
+## Dia 1 - 2025-04-09
+
 - Comfiguracion del proyecto, creacion de la carpeta trivia-game-python
 - Instalacion de FastAPI, Uvicorn y otras dependencias
 - Creacion del `Docker file`
@@ -11,7 +12,8 @@
 
 
 
-## Dia 2 – 2025-04-11
+## Dia 2 – 2025-04-10
+
 - Implementación de la clase `Question` en `trivia.py`
 - Pruebas unitarias en `test_trivia.py`
 - Se validó con pytest
@@ -31,6 +33,7 @@
 ## Dia 4 - 2025-04-12
 - Modificar la clase `Quiz`
 - Actualizar pruebas unitarias `test_quiz_scoring()`
+<<<<<<< HEAD
 - Implementar la funcion `run_Quiz()`
 - Commit : "Implementación de sistema de puntuación, manejo de rondas y finalización del juego"
 - Rama: `feature/dia4`
@@ -44,3 +47,4 @@
 - Commit :"Implementación de sistema de puntuación, manejo de rondas y finalización del juego"
 - Rama: `feature/dia5`
 - tag: `v1.0-day5`
+
