@@ -50,7 +50,7 @@ jobs:
       - name: Run SonarQube Scanner
         run: | 
           sonar-scanner \
-            -Dsonar.projectKey=trivia-game-python \
+            -Dsonar.projectKey=EdySerrano_trivia-game-python \
             -Dsonar.organization=edyserrano \
             -Dsonar.sources=. \
             -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} \
