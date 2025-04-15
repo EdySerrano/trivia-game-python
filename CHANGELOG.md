@@ -44,3 +44,14 @@
 - Commit :"Implementación de sistema de puntuación, manejo de rondas y finalización del juego"
 - Rama: `feature/dia5`
 - tag: `v1.0-day5`
+
+## Dia 6 - 2025-04-14
+- Crear una rama para CI/CD
+- Crear el archivo de workflow en gitHubActions
+- Configurar `SonarQube`
+- Implementar las pruebas de integracion para la API
+- Commit:"Configuración de pipeline CI/CD y pruebas de integración"
+- rama: `feature/dia6`
+- tag: `v1.0-day6`
+
+
