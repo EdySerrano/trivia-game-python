@@ -161,8 +161,6 @@ def get_medium():
 def get_hard():
     questions = get_hard_questions()
     return [{"description": q.description, "options": q.options} for q in questions]
-=======
-# trivia.py
 
 class Question:
     def __init__(self, description, options, correct_answer):
