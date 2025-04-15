@@ -1,50 +1,28 @@
-name: Python CI
+name: SonarCloud
 
 on:
   push:
     branches:
-      - develop
-      - feature/dia6
+      - main
   pull_request:
-    branches:
-      - develop
+    types: [opened, synchronize, reopened]
 
 jobs:
-  build:
+  sonarcloud:
+    name: SonarCloud Scan
     runs-on: ubuntu-latest
 
     steps:
-      - name: Clean up __pycache__
-        run: |
-          find . -type d -name '__pycache__' -exec rm -r {} +
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Java 17 for SonarCloud
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.9'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Run tests
-        run: pytest -s
-
-      - name: Run SonarCloud Scan
+      - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2
         with:
           projectBaseDir: .
+          args: >
+            -Dsonar.projectKey=EdySerrano_trivia-game-python
+            -Dsonar.organization=edyserrano
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
 
