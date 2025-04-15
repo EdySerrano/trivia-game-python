@@ -53,3 +53,5 @@
 - Commit:"Configuración de pipeline CI/CD y pruebas de integración"
 - rama: `feature/dia6`
 - tag: `v1.0-day6`
+
+
