@@ -3,7 +3,7 @@ name: Python CI
 on:
   push:
     branches: [develop, feature/dia6]
-    pull_request:
+  pull_request:
     branches: [develop]
 
 jobs:
