@@ -1,7 +1,6 @@
 # CHANGELOG.md
 
 
-
 ## Dia 1 - 2025-04-09
 - Comfiguracion del proyecto, creacion de la carpeta trivia-game-python
 - Instalacion de FastAPI, Uvicorn y otras dependencias
@@ -9,6 +8,7 @@
 - Configuracion del `Docker-compose.yml`
 - Inicializaciony creacion de la rama: `develop`
 - Commit: `Configuración inicial del proyecto y archivos Docker`
+
 
 
 
@@ -46,3 +46,14 @@
 - Commit :"Implementación de sistema de puntuación, manejo de rondas y finalización del juego"
 - Rama: `feature/dia5`
 - tag: `v1.0-day5`
+
+
+## Dia 6 - 2025-04-14
+- Crear una rama para CI/CD
+- Crear el archivo de workflow en gitHubActions
+- Configurar `SonarQube`
+- Implementar las pruebas de integracion para la API
+- Commit:"Configuración de pipeline CI/CD y pruebas de integración"
+- rama: `feature/dia6`
+- tag: `v1.0-day6`
+
