@@ -3,15 +3,18 @@ from trivia import app
 
 client = TestClient(app)
 
-def test_create_question():
-    response = client.post("/questions/", json={
-        "description": "What is 2 + 2?",
-        "options": ["1", "2", "3", "4"],
-        "correct_answer": "4"
-    })
-    assert response.status_code == 201
-
-def test_get_question():
-    response = client.get("/questions/1")
+def test_get_easy_questions():
+    response = client.get("/questions/easy")
     assert response.status_code == 200
-    assert response.json()["description"] == "What is 2 + 2?"
+    assert len(response.json()) == 10
+    assert "description" in response.json()[0]
+
+def test_get_medium_questions():
+    response = client.get("/questions/medium")
+    assert response.status_code == 200
+    assert len(response.json()) == 10
+
+def test_get_hard_questions():
+    response = client.get("/questions/hard")
+    assert response.status_code == 200
+    assert len(response.json()) == 10
