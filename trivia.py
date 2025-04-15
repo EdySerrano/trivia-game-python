@@ -179,7 +179,22 @@ class QuestionCreate(BaseModel):
 
 class QuestionOut(QuestionCreate):
     id: int
-    
+
 questions_db = []
+
+@app.post("/questions/", status_code=201)
+def create_question(question: QuestionCreate):
+    question_id = len(questions_db) + 1
+    question_dict = question.dict()
+    question_dict["id"] = question_id
+    questions_db.append(question_dict)
+    return {"message": "Question created"}
+
+@app.get("/questions/{question_id}", response_model=QuestionOut)
+def get_question(question_id: int):
+    for question in questions_db:
+        if question["id"] == question_id:
+            return question
+    raise HTTPException(status_code=404, detail="Question not found")
 
 
