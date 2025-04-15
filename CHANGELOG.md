@@ -47,6 +47,8 @@
 - Rama: `feature/dia5`
 - tag: `v1.0-day5`
 
+
+
 ## Dia 6 - 2025-04-14
 - Crear una rama para CI/CD
 - Crear el archivo de workflow en gitHubActions
@@ -55,3 +57,15 @@
 - Commit:"Configuración de pipeline CI/CD y pruebas de integración"
 - rama: `feature/dia6`
 - tag: `v1.0-day6`
+
+
+
+## Dia 7 - 2025-04-15
+- Crear el archivo `.env`
+- Modificar la aplicacion para cargas variables
+- Agregamos pruebas de seguridad en Bandit en el pipeline
+- Creamos el archivo `locustfile.py` para pruebas
+- Commit:""Versión final del proyecto Trivia con CI/CD y pruebas de seguridad""
+- rama: `feature/dia7`
+- tag: `v1.0-day7`
+

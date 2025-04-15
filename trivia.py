@@ -1,12 +1,19 @@
 # trivia.py
 
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+DATABASE_URL = os.getenv("DATABASE_URL")
+SECRET_KEY = os.getenv("SECRET_KEY")
+
 class Question:
     def __init__(self, description, options, correct_answer):
         self.description = description
         self.options = options
         self.correct_answer = correct_answer
 
-    def is_correct(self, answer):
+n    def is_correct(self, answer):
         return self.correct_answer == answer
 
 
@@ -52,16 +59,14 @@ def get_hard_questions():
         Question("¿En qué año comenzó la Revolución Francesa?", ["1776", "1789", "1804", "1815"], "1789"),
         Question("¿Qué tipo de célula no tiene núcleo?", ["Animal", "Vegetal", "Procariota", "Eucariota"], "Procariota"),
         Question("¿Qué filósofo escribió 'El ser y la nada'?", ["Sartre", "Nietzsche", "Kant", "Heidegger"], "Sartre"),
-        
-    ]
 
+     ]
 
 
 class Quiz:
     def __init__(self):
         self.questions = []
         self.current_question_index = 0
-
 
         self.correct_answers = 0
         self.incorrect_answers = 0
@@ -134,4 +139,5 @@ def run_quiz():
     print(f"Preguntas contestadas: 10")
     print(f" Respuestas correctas: {quiz.correct_answers}")
     print(f" Respuestas incorrectas: {quiz.incorrect_answers}")
+
 
