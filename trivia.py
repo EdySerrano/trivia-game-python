@@ -13,7 +13,7 @@ class Question:
         self.options = options
         self.correct_answer = correct_answer
 
-n    def is_correct(self, answer):
+    def is_correct(self, answer):
         return self.correct_answer == answer
 
 
