@@ -16,8 +16,6 @@ class Question:
 n    def is_correct(self, answer):
         return self.correct_answer == answer
 
-    
-
 def get_easy_questions():
     return [
         Question("¿Cual es la capital de Francia?", ["Madrid", "Londres", "París", "Berlín"], "París"),
@@ -59,9 +57,8 @@ def get_hard_questions():
         Question("¿En qué año comenzó la Revolución Francesa?", ["1776", "1789", "1804", "1815"], "1789"),
         Question("¿Qué tipo de célula no tiene núcleo?", ["Animal", "Vegetal", "Procariota", "Eucariota"], "Procariota"),
         Question("¿Qué filósofo escribió 'El ser y la nada'?", ["Sartre", "Nietzsche", "Kant", "Heidegger"], "Sartre"),
-        
-    ]
 
+     ]
 
 class Quiz:
     def __init__(self):
@@ -89,6 +86,7 @@ class Quiz:
         else:
             self.incorrect_answers += 1
             return False
+
 
 def run_quiz():
     print("=" * 40)
@@ -138,3 +136,5 @@ def run_quiz():
     print(f"Preguntas contestadas: 10")
     print(f" Respuestas correctas: {quiz.correct_answers}")
     print(f" Respuestas incorrectas: {quiz.incorrect_answers}")
+
+

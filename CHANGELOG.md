@@ -1,7 +1,8 @@
 # CHANGELOG.md
 
 
-## Dia 1 - 2025-04-10
+
+## Dia 1 - 2025-04-09
 - Comfiguracion del proyecto, creacion de la carpeta trivia-game-python
 - Instalacion de FastAPI, Uvicorn y otras dependencias
 - Creacion del `Docker file`
@@ -11,7 +12,8 @@
 
 
 
-## Dia 2 – 2025-04-11
+
+## Dia 2 – 2025-04-10
 - Implementación de la clase `Question` en `trivia.py`
 - Pruebas unitarias en `test_trivia.py`
 - Se validó con pytest
