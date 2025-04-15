@@ -131,3 +131,33 @@ def run_quiz():
     print(f"Preguntas contestadas: 10")
     print(f" Respuestas correctas: {quiz.correct_answers}")
     print(f" Respuestas incorrectas: {quiz.incorrect_answers}")
+
+
+
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+@app.get("/questions/easy")
+def get_easy():
+    questions = get_easy_questions()
+    return [{"description": q.description, "options": q.options} for q in questions]
+
+@app.get("/questions/medium")
+def get_medium():
+    questions = get_medium_questions()
+    return [{"description": q.description, "options": q.options} for q in questions]
+
+@app.get("/questions/hard")
+def get_hard():
+    questions = get_hard_questions()
+    return [{"description": q.description, "options": q.options} for q in questions]
+
