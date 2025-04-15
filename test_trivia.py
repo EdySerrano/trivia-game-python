@@ -1,10 +1,6 @@
-# test_trivia.py
-
 import pytest
 from trivia import Question, Quiz
 from trivia import run_quiz
-
-run_quiz()
 
 def test_question_correct_answer():
     question = Question("What is 2 + 2?", ["1", "2", "3", "4"], "4")
@@ -26,3 +22,7 @@ def test_quiz_multiple_questions():
     assert quiz.correct_answers == 1
     assert quiz.incorrect_answers == 1
 
+
+def test_run_quiz(monkeypatch):
+    monkeypatch.setattr('builtins.input', lambda _: '1')  
+    run_quiz() 
