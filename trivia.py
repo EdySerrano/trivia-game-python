@@ -169,3 +169,17 @@ def get_hard():
     questions = get_hard_questions()
     return [{"description": q.description, "options": q.options} for q in questions]
 
+from pydantic import BaseModel
+from typing import List
+
+class QuestionCreate(BaseModel):
+    description: str
+    options: List[str]
+    correct_answer: str
+
+class QuestionOut(QuestionCreate):
+    id: int
+    
+questions_db = []
+
+
