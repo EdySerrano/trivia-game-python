@@ -23,6 +23,7 @@ def get_easy_questions():
         Question("¿Cual es la capital de Francia?", ["Madrid", "Londres", "París", "Berlín"], "París"),
         Question("¿Cual es el R=resultado de 3 x 3?", ["6", "9", "12", "3"], "9"),
         Question("¿Quien gano la copa del mundo 2022?", ["Peru", "Francia", "Brasil", "Argentina"], "Argentina"),
+        
         Question("¿Cuál es la capital de Australia?", ["Sídney", "Melbourne", "Canberra", "Brisbane"], "Canberra"),
         Question("¿Quién pintó la Mona Lisa?", ["Van Gogh", "Picasso", "Da Vinci", "Rembrandt"], "Da Vinci"),
         Question("¿Cuál es el planeta más grande del sistema solar?", ["Tierra", "Saturno", "Júpiter", "Marte"], "Júpiter"),
